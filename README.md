@@ -51,5 +51,5 @@ For the MAP Challenge instance segmentation task, **MaskDINO** appears to be the
 ## Related Repositories
 
 For MaskDINO experiments, you might want to check out:
-- [MaskDINO GitHub Repository](https://github.com/shift-cv/MaskDINO)
+- [MaskDINO training Repository](https://github.com/saidineshpola/MaskDINO-mapchallenge/blob/main/README.md)
 
