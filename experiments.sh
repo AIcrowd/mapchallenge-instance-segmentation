@@ -19,9 +19,11 @@ mkdir -p logs
 
 # Run experiments
 run_training projects/mapchallenge/mask2former_swin-s-p4-w7-224_8xb2-lsj-50e_coco.py > logs/mask2former_swin-s.log 2>&1
+run_training projects/mapchallenge/mask2former_swin-L_8xb32-24k_coco.py > logs/mask2former_swin-L.log 2>&1
 run_training projects/mapchallenge/queryinst_r101_fpn_300_proposals_crop_mstrain_2x_coco.py > logs/queryinst_r101.log 2>&1
 run_training projects/mapchallenge/queryinst_r50_fpn_ms-2x_coco.py > logs/queryinst_r50.log 2>&1
 run_training projects/mapchallenge/rtmdet-ins_X_8xb16-300e_satellite.py > logs/rtmdet-ins_X.log 2>&1
 run_training projects/mapchallenge/rtmdet-ins_m_8xb32-300e_satellite.py > logs/rtmdet-ins_m.log 2>&1
+
 
 echo "All experiments completed. Check logs in the logs/ and workdirs/ directory."
