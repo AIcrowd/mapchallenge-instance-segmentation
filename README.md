@@ -35,15 +35,15 @@ bash experiments.sh
 ```
 ## MAP Challenge Instance Segmentation Results
 
-| Model | segm mAP | segm mAP_50 | segm mAP_75 | segm mAP_s | segm mAP_m | segm mAP_l |
-|-------|----------|-------------|-------------|------------|------------|------------|
-| SwinS-Mask2former | 0.3110 | 0.7160 | 0.2180 | 0.1690 | 0.4420 | 0.0990 |
-| SwinL-Mask2former | 0.3080 | 0.7260 | 0.2360 | 0.1710 | 0.4400 | 0.1310 |
-| Rtmdet-X | 0.3910 | 0.7760 | 0.3440 | 0.2090 | 0.5440 | 0.2930 |
-| RTMdet-M | 0.3790 | 0.7540 | 0.3170 | 0.2150 | 0.5210 | 0.2820 |
-| QueryInst-r50 | 0.2770 | 0.6520 | 0.1830 | 0.1380 | 0.3890 | 0.1530 |
-| QueryInst-r101 | 0.2780 | 0.6340 | 0.2000 | 0.1760 | 0.3910 | 0.1010 |
-| MaskDINO | 0.5100 | 0.8690 | 0.5200 | 0.2740 | 0.6500 | 0.6560 |
+| Model            | segm mAP | segm mAP_50 | segm mAP_75 | segm mAP_s | segm mAP_m | segm mAP_l | segm AR | mAR_50 | segm AR_75 |
+|------------------|----------|-------------|-------------|------------|------------|------------|---------|--------|------------|
+| SwinS-Mask2former| 0.3110   | 0.7160      | 0.2180      | 0.1690     | 0.4420     | 0.0990     | -       | -      | -          |
+| SwinL-Mask2former| 0.3080   | 0.7260      | 0.2360      | 0.1710     | 0.4400     | 0.1310     | -       | -      | -          |
+| Rtmdet-X         | 0.3910   | 0.7760      | 0.3440      | 0.2090     | 0.5440     | 0.2930     | -       | -      | -          |
+| RTMdet-M         | 0.3790   | 0.7540      | 0.3170      | 0.2150     | 0.5210     | 0.2820     | -       | -      | -          |
+| QueryInst-r50    | 0.2770   | 0.6520      | 0.1830      | 0.1380     | 0.3890     | 0.1530     | 0.432   | 0.826  | 0.384      |
+| QueryInst-r101   | 0.2780   | 0.6340      | 0.2000      | 0.1760     | 0.3910     | 0.1010     | -       | -      | -          |
+| MaskDINO         | 0.5100   | 0.8690      | 0.5200      | 0.2740     | 0.6500     | 0.6560     | -       | -      | -          |
 
 <br>
 For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for medium to large objects.
