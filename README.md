@@ -35,7 +35,7 @@ bash experiments.sh
 ```
 ## MAP Challenge Instance Segmentation Results
 
-| Model            | segm mAP | segm mAP_50 | segm mAP_75 | segm mAP_s | segm mAP_m | segm mAP_l | segm AR | mAR_50 | segm AR_75 |
+| Model            | segm mAP | segm mAP_50 | segm mAP_75 | segm mAP_s | segm mAP_m | segm mAP_l | segm AR | segm mAR_50 | segm mAR_75 |
 |------------------|----------|-------------|-------------|------------|------------|------------|---------|--------|------------|
 | SwinS-Mask2former| 0.3110   | 0.7160      | 0.2180      | 0.1690     | 0.4420     | 0.0990     | -       | -      | -          |
 | SwinL-Mask2former| 0.3080   | 0.7260      | 0.2360      | 0.1710     | 0.4400     | 0.1310     | -       | -      | -          |
