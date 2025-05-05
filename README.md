@@ -46,7 +46,7 @@ bash experiments.sh
 | **MaskDINO**     | **0.561** | **0.911**    | **0.65**    | **0.351**   | **0.6843** | **0.6851** | **0.617** | **0.949** | **0.703**      |
 
 <br>
-For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for medium to large objects.
+For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for small and large objects.
 
 ## Related Repositories
 
