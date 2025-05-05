@@ -46,6 +46,20 @@ bash experiments.sh
 | **MaskDINO**     | **0.561** | **0.911**    | **0.65**    | **0.351**   | **0.6843** | **0.6851** | **0.617** | **0.949** | **0.703**      |
 
 <br>
+
+## MAP Challenge Results for 0.50 IoU
+
+| Model            | segm mAP_50 |
+|------------------|-------------|
+| SwinS-Mask2former| 0.7160      |
+| SwinL-Mask2former| 0.7260      |
+| Rtmdet-X         | 0.7760      |
+| RTMdet-M         | 0.7540      |
+| QueryInst-r50    | 0.6520      |
+| QueryInst-r101   | 0.6340      |
+| **MaskDINO**     | **0.911**   |
+
+<br>
 For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for small and large objects.
 
 ## Related Repositories
