@@ -43,7 +43,7 @@ bash experiments.sh
 | RTMdet-M         | 0.3790   | 0.7540      | 0.3170      | 0.2150     | 0.5210     | 0.2820     | 0.485   |  0.87  | 0.457      |
 | QueryInst-r50    | 0.2770   | 0.6520      | 0.1830      | 0.1380     | 0.3890     | 0.1530     | 0.432   | 0.826  | 0.384      |
 | QueryInst-r101   | 0.2780   | 0.6340      | 0.2000      | 0.1760     | 0.3910     | 0.1010     | 0.458   | 0.855  | 0.464      |
-| MaskDINO         | 0.5100   | 0.8690      | 0.5200      | 0.2740     | 0.6500     | 0.6560     | -       | -      | -          |
+| MaskDINO         | 0.5100   | 0.8690      | 0.5200      | 0.2740     | 0.6500     | 0.6560     | 0.575   | -      | -          |
 
 <br>
 For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for medium to large objects.
