@@ -31,7 +31,7 @@ You can find and edit experiment configurations in the `projects/mapchallenge` f
 ### Experiment Script
 ```bash
 # Run the experiments script
-bash experiments.sh
+bash train.sh
 ```
 ## MAP Challenge Instance Segmentation Results
 
