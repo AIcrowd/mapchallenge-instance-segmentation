@@ -254,23 +254,32 @@ class COCOevalMP(COCOeval):
 
         def _summarizeDets():
             stats = []
+        
+            # AP metrics
             stats.append(_summarize(1, maxDets=self.params.maxDets[-1]))
-            stats.append(
-                _summarize(1, iouThr=.5, maxDets=self.params.maxDets[-1]))
-            stats.append(
-                _summarize(1, iouThr=.75, maxDets=self.params.maxDets[-1]))
+            stats.append(_summarize(1, iouThr=.5, maxDets=self.params.maxDets[-1]))
+            stats.append(_summarize(1, iouThr=.75, maxDets=self.params.maxDets[-1]))
             for area_rng in ('small', 'medium', 'large'):
                 stats.append(
-                    _summarize(
-                        1, areaRng=area_rng, maxDets=self.params.maxDets[-1]))
-            for max_det in self.params.maxDets:
+                    _summarize(1, areaRng=area_rng, maxDets=self.params.maxDets[-1])
+                )
+        
+            # AR metrics (matching same pattern as AP for better comparison)
+            stats.append(_summarize(0, maxDets=self.params.maxDets[-1]))
+            stats.append(_summarize(0, iouThr=.5, maxDets=self.params.maxDets[-1]))
+            stats.append(_summarize(0, iouThr=.75, maxDets=self.params.maxDets[-1]))
+            for area_rng in ('small', 'medium', 'large'):
+                stats.append(
+                    _summarize(0, areaRng=area_rng, maxDets=self.params.maxDets[-1])
+                )
+        
+            # Additional AR metrics with different maxDets
+            for max_det in self.params.maxDets[:-1]:  # Skip the last one (already included above)
                 stats.append(_summarize(0, maxDets=max_det))
-            for area_rng in ('small', 'medium', 'large'):
-                stats.append(
-                    _summarize(
-                        0, areaRng=area_rng, maxDets=self.params.maxDets[-1]))
+        
             stats = np.array(stats)
             return stats
+
 
         def _summarizeKps():
             stats = np.zeros((10, ))
