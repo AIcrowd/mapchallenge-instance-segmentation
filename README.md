@@ -60,8 +60,8 @@ bash train.sh
 | **MaskDINO**     | **0.911**   |
 
 <br>
-For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for small and large objects.
-
+<!-- For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for small and large objects.
+ -->
 ## Related Repositories
 
 For MaskDINO experiments, you might want to check out:
