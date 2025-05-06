@@ -484,12 +484,12 @@ class CocoMetric(BaseMetric):
                 'mAP_s': 3,
                 'mAP_m': 4,
                 'mAP_l': 5,
-                'AR@100': 6,
-                'AR@300': 7,
-                'AR@1000': 8,
-                'AR_s@1000': 9,
-                'AR_m@1000': 10,
-                'AR_l@1000': 11
+                'mAR': 6,
+                'mAR_50': 7,
+                'mAR_75': 8,
+                'mAR_s': 9,
+                'mAR_m': 10,
+                'mAR_l': 11,
             }
             metric_items = self.metric_items
             if metric_items is not None:
