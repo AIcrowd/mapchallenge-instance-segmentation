@@ -81,7 +81,7 @@ class CocoMetric(BaseMetric):
                  collect_device: str = 'cpu',
                  prefix: Optional[str] = None,
                  sort_categories: bool = False,
-                 use_mp_eval: bool = False) -> None:
+                 use_mp_eval: bool = True) -> None:
         super().__init__(collect_device=collect_device, prefix=prefix)
         # coco evaluation metrics
         self.metrics = metric if isinstance(metric, list) else [metric]
@@ -466,10 +466,7 @@ class CocoMetric(BaseMetric):
                     'The testing results of the whole dataset is empty.')
                 break
 
-            if self.use_mp_eval:
-                coco_eval = COCOevalMP(self._coco_api, coco_dt, iou_type)
-            else:
-                coco_eval = COCOeval(self._coco_api, coco_dt, iou_type)
+            coco_eval = COCOevalMP(self._coco_api, coco_dt, iou_type)
 
             coco_eval.params.catIds = self.cat_ids
             coco_eval.params.imgIds = self.img_ids
