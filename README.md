@@ -43,7 +43,8 @@ bash train.sh
 | RTMdet-M         | 0.3790   | 0.7540      | 0.3170      | 0.2150     | 0.5210     | 0.2820     | 0.485   |  0.87  | 0.457      |
 | QueryInst-r50    | 0.2770   | 0.6520      | 0.1830      | 0.1380     | 0.3890     | 0.1530     | 0.432   | 0.826  | 0.384      |
 | QueryInst-r101   | 0.2780   | 0.6340      | 0.2000      | 0.1760     | 0.3910     | 0.1010     | 0.458   | 0.855  | 0.464      |
-| **MaskDINO**     | **0.561** | **0.911**    | **0.65**    | **0.351**   | **0.6843** | **0.6851** | **0.617** | **0.949** | **0.703**      |
+| [**MaskDINO**]([logs/experiment/maskdino-v2-full-run-1xH100-maskdino_R50_bs16_50ep_4s_dowsample1_2048.txt](https://github.com/AIcrowd/MaskDINO-mapchallenge/blob/main/logs/experiment/maskdino-v2-full-run-1xH100-maskdino_R50_bs16_50ep_4s_dowsample1_2048.txt)) | **0.584**| **0.9022**| **0.6150**| **0.3670**| **0.6911**| **0.9287**| **0.6802**| **0.9569**| **0.75**|
+
 
 <br>
 
@@ -57,7 +58,7 @@ bash train.sh
 | RTMdet-M         | 0.7540      |
 | QueryInst-r50    | 0.6520      |
 | QueryInst-r101   | 0.6340      |
-| **MaskDINO**     | **0.911**   |
+| **MaskDINO**     | **0.9022**   |
 
 <br>
 <!-- For the MAP Challenge instance segmentation task, **MaskDINO** got the most robust and high-performing model, especially for small and large objects.
