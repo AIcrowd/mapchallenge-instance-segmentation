@@ -26,5 +26,5 @@ param_scheduler = [
         convert_to_iter_based=True,
     ),
 ]
-
+load_from = 'https://download.openmmlab.com/mmdetection/v3.0/rtmdet/rtmdet-ins_x_8xb16-300e_coco/rtmdet-ins_x_8xb16-300e_coco_20221124_111313-33d4595b.pth'
 work_dir = "./work_dirs/rtmdet-ins_X_8xb16-300e_satellite"
