@@ -1,4 +1,4 @@
-_base_ = "./queryinst_r50_fpn_ms-2x_coco.py"
+_base_ = "./queryinst_r50_fpn_ms-3x_coco.py"
 
 num_proposals = 300
 
