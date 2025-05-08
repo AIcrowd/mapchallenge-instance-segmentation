@@ -116,7 +116,7 @@ image_size = (
 )
 
 launcher = "pytorch"
-load_from = None
+load_from = "https://download.openmmlab.com/mmdetection/v3.0/mask2former/mask2former_swin-s-p4-w7-224_8xb2-lsj-50e_coco/mask2former_swin-s-p4-w7-224_8xb2-lsj-50e_coco_20220504_001756-c9d0c4f2.pth"
 log_level = "INFO"
 log_processor = dict(by_epoch=False, type="LogProcessor", window_size=50)
 
