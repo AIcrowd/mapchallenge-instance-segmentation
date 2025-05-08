@@ -2,13 +2,14 @@ batch_size = 16
 auto_scale_lr = dict(base_batch_size=batch_size, enable=False)
 backend_args = None
 resume = False
-max_epochs = 24
+max_epochs = 36
 data_root = "/usr/instance_segmentation/"
 default_scope = "mmdet"
 dataset_type = "SatelliteDataset"
 launcher = "pytorch"
-load_from = "https://download.openmmlab.com/mmdetection/v2.0/queryinst/queryinst_r101_fpn_300_proposals_crop_mstrain_480-800_3x_coco/queryinst_r101_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_153621-76cce59f.pth"
+load_from = "https://download.openmmlab.com/mmdetection/v2.0/queryinst/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco/queryinst_r50_fpn_300_proposals_crop_mstrain_480-800_3x_coco_20210904_101802-85cffbd8.pth"
 log_level = "INFO"
+num_proposals = 300
 
 mean = [88.03, 104.33, 115.77]
 std = [44.37, 43.48, 41.56]
@@ -562,9 +563,12 @@ model = dict(
         type="SparseRoIHead",
     ),
     rpn_head=dict(
-        num_proposals=100, proposal_feature_channel=256, type="EmbeddingRPNHead"
+        num_proposals= num_proposals, proposal_feature_channel=256, type="EmbeddingRPNHead"
     ),
-    test_cfg=dict(rcnn=dict(mask_thr_binary=0.5, max_per_img=100), rpn=None),
+    test_cfg= test_cfg=dict(
+        _delete_=True,
+        rpn=None,
+        rcnn=dict(max_per_img=num_proposals, mask_thr_binary=0.5)),
     train_cfg=dict(
         rcnn=[
             dict(
@@ -650,7 +654,7 @@ model = dict(
     ),
     type="QueryInst",
 )
-num_proposals = 100
+
 num_stages = 6
 
 optim_wrapper = dict(
