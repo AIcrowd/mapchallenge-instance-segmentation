@@ -565,7 +565,7 @@ model = dict(
     rpn_head=dict(
         num_proposals= num_proposals, proposal_feature_channel=256, type="EmbeddingRPNHead"
     ),
-    test_cfg= test_cfg=dict(
+    test_cfg=dict(
         _delete_=True,
         rpn=None,
         rcnn=dict(max_per_img=num_proposals, mask_thr_binary=0.5)),
