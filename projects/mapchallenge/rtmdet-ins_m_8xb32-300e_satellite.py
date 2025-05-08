@@ -323,7 +323,7 @@ visualizer = dict(
 
 # Runtime settings
 log_level = "INFO"
-load_from = None
+load_from = "https://download.openmmlab.com/mmdetection/v3.0/rtmdet/rtmdet-ins_m_8xb32-300e_coco/rtmdet-ins_m_8xb32-300e_coco_20221123_001039-6eba602e.pth"
 resume = False
 work_dir = "./work_dirs/rtmdet-ins_m_8xb32-300e_satellite"
 val_cfg = dict(type="ValLoop")
